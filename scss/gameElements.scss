@@ -1,0 +1,148 @@
+@import 'mixins';
+
+.gameElements {
+    width: 100%;
+    margin-top: 300px;
+    margin-bottom: 300px;
+    @include br(xl) {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    &-title {
+        text-align: center;
+        color: #00578d;
+        font-size: 50px;
+        margin: 0px 0px 40px 0px;
+    }
+    &-subtitle{
+        text-align: center;
+        font-size: 28px;
+        color: black;
+        margin: 0px 0px 0px 0px;
+    }
+        .swiper {
+            width: 1000px;
+            height: 500px;
+            padding:140px 0px 100px 0px;
+            @include br(lg) {
+                width: 700px;
+                padding: 50px 0px 100px 0px;
+            }
+            @include br(md) {
+                width: 500px;
+                padding: 50px 0px 100px 0px;
+            }
+            @include br(sm) {
+                width: 350px;
+                height: 300px;
+            }
+            @include br(xs) {
+                width: 300px;
+            }
+            &-slide{
+                display: flex;
+                justify-content: center;
+                &-image{
+                    position: relative;
+                    img {
+                        @include br(md) {
+                            width: 500px;
+                        }
+                        @include br(sm) {
+                            width: 350px;
+                        }
+                        @include br(xs) {
+                            width: 300px;
+                        }
+                    }
+                    .credits {
+                        position: absolute;
+                        top: 0%;
+                        right: 10%;
+                        width: 128px;
+                        height: 128px;
+                        background-color: #6048ff;
+                        color: white;
+                        border-radius: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        font-size: 38px;
+                        font-weight: bold;
+                        line-height: 20px;
+                        box-sizing: border-box;
+                        padding-top: 10px;
+                        span {
+                            font-size: 12px;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+            &-button-prev {
+                width: 125px;
+                height: 125px;
+                &::after {
+                    content: '';
+                    width: 100px;
+                    height: 100px;
+                    border-top: 2px black solid;
+                    border-left: 2px black solid;
+                    transform: rotate(-45deg);
+                }
+                @include br(md) {
+                    display: none;
+                }
+                @include br(sm) {
+                    display: none;
+                }
+            }
+
+            &-button-next {
+                width: 125px;
+                height: 125px;
+                &::after {
+                    content: '';
+                    width: 100px;
+                    height: 100px;
+                    border-top: 2px black solid;
+                    border-left: 2px black solid;
+                    transform: rotate(-225deg);
+                }
+                @include br(md) {
+                    display: none;
+                }
+                @include br(sm) {
+                    display: none;
+                }
+            }
+            &-pagination {
+                margin-bottom: 20px;
+                margin-left: 15px;
+
+                &-bullet {
+                    width: 20px;
+                    height: 20px;
+                    position: relative;
+                    background-color: transparent;
+                    border: 2px #5f3dff solid;
+                    &::after {
+                        content: '';
+                        display: none;
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 100%;
+                        display: block;
+                        background-color: #5f3dff;
+                        position: absolute;
+                        top: 25%;
+                        left: 25%;
+                    }
+                }
+            }
+            &-scrollbar{
+                display: none;
+            }
+        }   
+}

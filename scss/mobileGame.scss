@@ -1,0 +1,246 @@
+@import 'mixins';
+
+.mobileGame {
+    width: 100%;
+    background: url(/images/firstBg.png) no-repeat;
+    background-position: right top;
+    background-size: 59%;
+    padding-bottom: 250px;
+    position: relative;
+    @include br(xl) {
+        padding-bottom: 150px;
+    }
+    @include br(sm) {
+        padding-bottom: 120px;
+    }
+    h2,
+    h3 {
+        margin: 0px 0px;
+    }
+
+    &-logo {
+        padding-top: 100px;
+
+        @include br(xl) {
+            padding-top: 20px;
+        }
+
+        &--title {
+            font-size: 33px;
+            color: #69696a;
+            @include br(sm) {
+                font-size: 25px;
+            }
+        }
+
+        &--subtitle {
+            font-size: 22px;
+            color: #dfe5e9;
+            font-weight: 200;
+            @include br(sm) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    &_wrapper {
+        width: 100%;
+        display: flex;
+        .slider {
+            margin-top: 250px;
+
+            @include br(xl) {
+                margin-top: 50px;
+            }
+
+            .swiper {
+                width: 600px;
+                height: 300px;
+                padding-bottom: 120px;
+
+                @include br(xl) {
+                    width: 400px;
+                }
+                @include br(sm) {
+                    width: 350px;
+                    padding-bottom: 200px;
+                }
+                @include br(xs) {
+                    width: 300px;
+                }
+                &-pagination {
+                    width: 57%;
+                    margin-bottom: 15px;
+                    margin-left: 15px;
+
+                    @include br(xl) {
+                        width: 400px;
+                    }
+                    @include br(sm) {
+                        width: 350px;
+                        bottom: 2.5%;
+                        left: -2%;
+                    }
+                    &-bullet {
+                        width: 20px;
+                        height: 20px;
+                        position: relative;
+                        background-color: transparent;
+                        border: 2px #5f3dff solid;
+
+                        &::after {
+                            content: '';
+                            display: none;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 100%;
+                            display: block;
+                            background-color: #5f3dff;
+                            position: absolute;
+                            top: 25%;
+                            left: 25%;
+
+                        }
+                    }
+                }
+
+                &-scrollbar {
+                    display: none;
+                }
+
+                &-button-prev {
+                    top: 91%;
+
+                    svg {
+                        fill: gray;
+                    }
+
+                    &:hover {
+                        svg {
+                            fill: black;
+                        }
+                    }
+
+                    &::after {
+                        content: '';
+                    }
+
+                    &::before {
+                        content: 'prev';
+                        color: black;
+                        position: absolute;
+                        font-size: 12px;
+                        left: 50px;
+                        bottom: 30%;
+                        text-transform: uppercase;
+                        font-weight: bold;
+
+                    }
+                }
+
+                &-button-next {
+                    top: 91%;
+                    right: 40%;
+
+                    @include br(xl) {
+                        right: 0%;
+                    }
+
+                    svg {
+                        fill: gray;
+                    }
+
+                    &:hover {
+                        svg {
+                            fill: black;
+                        }
+                    }
+
+                    &::after {
+                        content: '';
+                    }
+
+                    &::before {
+                        content: 'next';
+                        color: black;
+                        position: absolute;
+                        font-size: 12px;
+                        right: 50px;
+                        bottom: 30%;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
+                }
+
+                &-slide {
+                    cursor: pointer;
+
+                    &--subtitle {
+                        font-size: 45px;
+                        color: #79796a;
+                        margin: 0px 0px 0px 0px;
+                    }
+
+                    &--title {
+                        font-size: 60px;
+                        color: #044c85;
+                        margin: 32px 0px 35px 0px;
+                    }
+
+                    &--description {
+                        font-size: 19px;
+                        color: #bcbcb5;
+                        line-height: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    &-mainButton {
+        position: absolute;
+        display: block;
+        width: 120px;
+        height: 120px;
+        background-color: #6048ff;
+        top: 60%;
+        left: 50%;
+        border-radius: 100%;
+        cursor: pointer;
+        transition: 0.3s ease;
+        @include br(xl) {
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        @include br(md) {
+            top: 65%;
+            left: 80%;
+        }
+        @include br(sm) {
+            z-index: 1;
+            top: 40%;
+        }
+        &_topArrow {
+            border-left: 3px white solid;
+            border-bottom: 3px white solid;
+            width: 20px;
+            height: 20px;
+            transform: rotate(-45deg) translate(-30%, -50%);
+            position: absolute;
+            top: 30%;
+            left: 50%;
+        }
+
+        &_bottomArrow {
+            border-left: 3px white solid;
+            border-bottom: 3px white solid;
+            width: 30px;
+            height: 30px;
+            transform: rotate(-45deg) translate(-30%, -50%);
+            position: absolute;
+            top: 40%;
+            left: 50%;
+        }
+    }
+}

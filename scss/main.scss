@@ -1,0 +1,68 @@
+
+@import 'mixins';
+@import 'mobileGame';
+@import 'platforms';
+@import 'about';
+@import 'gameElements';
+@import 'comments';
+@import 'subscribe';
+@import 'social';
+@import 'footer';
+
+
+body {
+    max-width: 1920px 100%;
+    box-sizing: border-box;
+    margin: 0px 0px 0px 0px;
+    letter-spacing: 2px;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1550px;
+    margin: 0 auto;
+    padding: 0px 5px;
+    @include br(xl) {
+        max-width: 1024px;
+        padding: 0 15px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    @include br(lg) {
+        max-width: 992px;
+        padding: 0 15px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    @include br(md) {
+        max-width: 768px;
+        padding: 0 10px;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    @include br(sm) {
+        max-width: 425px;
+        padding: 0 10px;
+        box-sizing: border-box;
+        margin: 0px 0px 0px 0px;
+    }
+
+    @include br(xs) {
+        max-width: 375px;
+        padding: 0 5px;
+        box-sizing: border-box;
+        margin: 0px 0px 0px 0px;
+    }
+
+    @include br(xxs) {
+        max-width: 320px;
+        padding: 0 5px;
+        box-sizing: border-box;
+        margin: 0px 0px 0px 0px;
+    }
+}
+
+
