@@ -29,7 +29,7 @@
                 padding: 50px 0px 100px 0px;
             }
             @include br(md) {
-                width: 500px;
+                width: auto;
                 padding: 50px 0px 100px 0px;
             }
             @include br(sm) {
@@ -46,7 +46,7 @@
                     position: relative;
                     img {
                         @include br(md) {
-                            width: 500px;
+                            width: 400px;
                         }
                         @include br(sm) {
                             width: 350px;

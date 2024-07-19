@@ -40,6 +40,9 @@
             border-top-left-radius: 40px;
             border-bottom-left-radius: 40px;
             font-weight: bold;
+            @include br(lg) {
+                width: auto;
+            }
             @include br(sm) {
                 width: 150px;
             }
@@ -57,6 +60,12 @@
             text-transform: uppercase;
             font-weight: bold;
             cursor: pointer;
+            @include br(lg) {
+                width: 250px;
+            }
+            @include br(md) {
+                width: auto;
+            }
             @include br(sm) {
                 width: 150px;
             }

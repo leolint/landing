@@ -81,6 +81,11 @@
                         bottom: 2.5%;
                         left: -2%;
                     }
+                    @include br(xs) {
+                        width: 350px;
+                        bottom: 2.5%;
+                        left: -12%;
+                    }
                     &-bullet {
                         width: 20px;
                         height: 20px;
@@ -219,7 +224,7 @@
         }
         @include br(sm) {
             z-index: 1;
-            top: 40%;
+            top: 33%;
         }
         &_topArrow {
             border-left: 3px white solid;

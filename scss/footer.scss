@@ -15,6 +15,7 @@
 
                 @include br(md) {
                     padding-left: 0px;
+                    flex-wrap: wrap;
                 }
 
                 @include br(sm) {
@@ -26,7 +27,9 @@
                     margin-right: 60px;
                     transition: 0.3s ease;
                     cursor: pointer;
-
+                    @include br(md) {
+                       margin: 10px 10px 10px 10px;
+                    }
                     @include br(xl) {
                         margin-right: 30px;
                         text-align: center;
@@ -50,8 +53,10 @@
                     &:nth-child(6) {
                         margin-right: 35px;
                         margin-left: 195px;
-
-                        @include br(md) {
+                        @include br(xl) {
+                            margin-left: 150px;
+                        }
+                        @include br(lg) {
                             margin-left: 15px;
                         }
                     }

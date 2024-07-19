@@ -34,6 +34,9 @@
 
         &-image {
             img {
+                @include br(md) {
+                    width: 400px;
+                }
                 @include br(sm) {
                    width: 300px;
                 }
